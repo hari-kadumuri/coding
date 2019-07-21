@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1527215995 source:c:\users\hari\desktop\algolab\endlabtest.c
+	<stdio.h>
+	<time.h>
+	<math.h>
+
+1526741515 source:c:\users\hari\desktop\algolab\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1527326150 source:c:\users\hari\desktop\algolab\endlt18.c
+	<stdio.h>
+
+1527334546 source:c:\users\hari\desktop\algolab\endlabtest16.c
+	<stdio.h>
+

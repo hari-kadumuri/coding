@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1527479889 source:c:\users\hari\desktop\google\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1527482824 source:c:\users\hari\desktop\google\subarraywithgivensum.c
+	<stdio.h>
+
+1527572298 source:c:\users\hari\desktop\google\findingthenumbers.c
+	<stdio.h>
+
+1527572619 source:c:\users\hari\desktop\google\findningthevalidparenthesis.c
+	<stdio.h>
+

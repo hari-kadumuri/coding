@@ -1,0 +1,60 @@
+# depslib dependency file v1.0
+1527852124 source:c:\users\hari\desktop\microsoft\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1527851519 source:c:\users\hari\desktop\microsoft\binarynumbermultipleof3.c
+	<stdio.h>
+
+1527851516 source:c:\users\hari\desktop\microsoft\keypair.c
+	<stdio.h>
+
+1527856188 source:c:\users\hari\desktop\microsoft\kadanesalgorithm.c
+	<stdio.h>
+	<stdlib.h>
+
+1527852030 source:c:\users\hari\desktop\microsoft\missingnumerinarray.c
+	<stdio.h>
+
+1527853199 source:c:\users\hari\desktop\microsoft\majorityelement.c
+	<stdio.h>
+
+1527854817 source:c:\users\hari\desktop\microsoft\searchinrotatedarray.c
+	<stdio.h>
+	<stdlib.h>
+
+1527927501 source:c:\users\hari\desktop\microsoft\checkforbst.c
+	<stdio.h>
+
+1527928348 source:c:\users\hari\desktop\microsoft\findingmiddleelementinlikenlist.c
+	<stdio.h>
+
+1527927797 source:c:\users\hari\desktop\microsoft\roottoleafpathsum.c
+	<stdio.h>
+
+1527928782 source:c:\users\hari\desktop\microsoft\reversealinkedlist.c
+	<stdio.h>
+
+1527934677 source:c:\users\hari\desktop\microsoft\removeeveryknode.c
+	<stdio.h>
+
+1527936446 source:c:\users\hari\desktop\microsoft\merge2sortedlinkedlistinreverseorder.c
+	<stdio.h>
+	<stdlib.h>
+
+1527939041 source:c:\users\hari\desktop\microsoft\longestevenlengthsubstring.c
+	<stdio.h>
+	<stdlib.h>
+
+1527939519 source:c:\users\hari\desktop\microsoft\klargestelements.c
+	<stdio.h>
+	<stdlib.h>
+
+1527940735 source:c:\users\hari\desktop\microsoft\convertbinarytreetomirrortree.c
+	<stdio.h>
+	<stdlib.h>
+
+1527941252 source:c:\users\hari\desktop\microsoft\ifidenticaltrees.c
+	<stdio.h>
+	<stdlib.h>
+
