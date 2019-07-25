@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
 
 int ifAlphaNumeric(char c) {
 	return (48<=c && c<=57 || 65<=c && c<= 90 || 97<=c && c<= 122?1:0);
