@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void sortTheStringWithLowerCases(char* s) {// runs in O(n) space
+void sortTheStringWithLowerCases(char* s) {// runs in O(n) time
 	int count[26], i, j = 0;
 	for(i=0;i<26;i++)
 		count[i] = 0;
