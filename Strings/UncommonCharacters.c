@@ -12,6 +12,8 @@ void findUncommonCharacters(char* a, char* b) {
 		if(x[i]==0 && y[i]!=0 || x[i]!=0 && y[i]==0)
 			printf("%c", i+'a');
 	printf("\n");
+	free(x);
+	free(y);
 }
 
 int main(int argc, char const *argv[])

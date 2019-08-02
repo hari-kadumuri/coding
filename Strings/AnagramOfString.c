@@ -16,6 +16,7 @@ void countSortLowerCaseString(char* a) {
 			x[j]--;
 		}
 	}
+	free(x);
 }
 
 int makeAnagrams(char* a, char* b) {
