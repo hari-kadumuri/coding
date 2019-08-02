@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 void findUncommonCharacters(char* a, char* b) {
-	int m = strlen(a), n = strlen(b), i, j, *x = (int*)calloc(26, sizeof(int)), *y = (int*)calloc(26, sizeof(int));
+	int m = strlen(a), n = strlen(b), i, *x = (int*)calloc(26, sizeof(int)), *y = (int*)calloc(26, sizeof(int));
 	for(i=0;i<m;i++)
 		x[a[i]-97] = 1;
 	for(i=0;i<n;i++)
