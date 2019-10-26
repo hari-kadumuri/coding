@@ -1,0 +1,2 @@
+1. Take an image and a fraction as input and zoom the image by that fraction. output the zoomed image
+2. Take a hardcoded cross-word puzzle and its corresponding words as input. Your program should fill the puzzle with those input words correctly.
