@@ -1,0 +1,49 @@
+int w = 1, r = 1;
+
+wait(int s):
+	if(s<=0) {
+		add it to list in the end;
+		block()
+	}
+
+signal(int s):
+	s++;
+
+write():
+	while(w<=0)
+	w--;
+	write into resource
+	w++;
+	r++;
+
+read():
+	r--;
+	while(w<=0);
+	read from resource
+	r++;
+
+ReadLock(int* s):
+	while(*s<=0);
+	*s--;
+
+writeLock(int* s):
+	while(*s<=0)
+	*s--;
+
+ReadUnlock(int* s):
+	*s++;
+
+WriteUnlock(int* s):
+	*s++;
+
+write():
+	writeLock(&s);
+	ReadLock(&s);
+	write into resource
+	writeUnlock(&s);
+	readUnlock(&s);
+
+read():
+	ReadLock(&s);
+	read the resource
+	ReadUnlock();
