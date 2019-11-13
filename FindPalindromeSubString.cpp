@@ -2,57 +2,57 @@
 using namespace std;
 #include <bits/stdc++.h>
 
-string getLPS(string s) {
-    int prelen = 1, len = 0, i, j, flag = 0, i1 = 0, j1 = 0;
-    for(i=1;i<s.size();i++) {
-        cout<<"at i = "<<i<<" / "<<s[i]<<" j = "<<j<<" len = "<<len<<" i1 = "<<i1<<" j1 = "<<j1<<" prelen = "<<prelen<<" len = "<<len<<" flag = "<<flag<<endl;
-        if(i-2>-1 && s[i]==s[i-2] && flag==0) {
-            j = i-3;
-            len += 3;
-            flag = 1;
+string getEvenPalindrome(string s) {
+    int maxval = -1, i1 = s.size(), j1 = -1;
+    for(int i=0;i<s.size();i++) {
+        int count = 0;
+        for(int j=i-1;j>-1 && 2*i-j-1<s.size();j--) {
+            if(s[j]==s[2*i-j-1])
+                count += 2;
+            else
+                break;
         }
-        else if(s[i]==s[i-1] && flag==0) {
-            j = i-2;
-            len += 2;
-            flag = 1;
+        if(count>maxval) {
+            maxval = count;
+            i1 = i-count/2;
+            j1 = i+count/2-1;
         }
-        else if(flag) {
-            if(j>-1) {
-                if(s[j]==s[i]) {
-                    len += 2;
-                    j--;
-                }
-                else {
-                    if(len>prelen) {
-                        prelen = len;
-                        i1 = i-1;
-                        j1 = j+1;
-                    }
-                    flag = 0;
-                    len = 0;
-                    i--;
-                }
-            }
-            else {
-                if(len>prelen) {
-                    prelen = len;
-                    i1 = i-1;
-                    j1 = 0;
-                }
-                flag = 0;
-                len = 0;
-                i--;
-            }
-        }
-    }
-    if(len>prelen) {
-        i1 = s.size()-1;
-        j1 = j+1;
     }
     string ret;
-    for(i=j1;i<=i1;i++)
-        ret.push_back(s[i]);
+    for(int k=i1;k<=j1 && i1<=j1;k++)
+        ret.push_back(s[k]);
     return ret;
+}
+
+string getOddPalindrome(string s) {
+    int maxval = -1, i1 = 0, j1 = 0;
+    for(int i=0;i<s.size();i++) {
+        int count = 1;
+        for(int j=i-1;j>-1 && 2*i-j<s.size();j--) {
+            if(s[j]==s[2*i-j])
+                count += 2;
+            else
+                break;
+        }
+        if(count>maxval) {
+            maxval = count;
+            i1 = i-count/2;
+            j1 = i+count/2;
+        }
+    }
+    string ret;
+    for(int k=i1;k<=j1;k++)
+        ret.push_back(s[k]);
+    return ret;
+}
+
+string getLPS(string s) {
+    string evenS = getEvenPalindrome(s);
+    string oddS = getOddPalindrome(s);
+    cout<<evenS<<endl;
+    cout<<oddS<<endl;
+    cout<<"returned"<<endl;
+    return (evenS.size()>oddS.size()?evenS:oddS);
 }
 
 int main() {
@@ -62,6 +62,8 @@ int main() {
 	while(T-- >0) {
 	    string s;
 	    cin>>s;
+        for(int i=0;i<s.size();i++)
+            cout<<i<<" -> "<<s[i]<<endl;
 	    cout<<getLPS(s)<<endl;
 	}
 	return 0;
