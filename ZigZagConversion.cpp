@@ -27,6 +27,6 @@ int main(int argc, char const *argv[])
 {
 	string s;
 	cin>>s;
-	cout<<convert(s, 1)<<endl;	
+	cout<<convert(s, 5)<<endl;	
 	return 0;
 }

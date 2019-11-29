@@ -55,25 +55,3 @@ int main(int argc, char const *argv[])
     cout<<ladderLength("hit", "cog", wordList)<<endl;
     return 0;
 }
-
- // for(int i=0;i<wordList.size();i++)
-    //     for(int j=0;j<wordList.size();j++)
-    //         cout<<"distance between "<<wordList[i]<<" and "<<wordList[j]<<" = "<<diff[i][j]<<endl;
-
-// long long int minval = LONG_MAX;
-    // cout<<"wordList[0] = "<<wordList[0]<<endl;
-    // for(int j=0;j<wordList.size();j++) {
-    //     cout<<"comparing with "<<wordList[j]<<endl;
-    //     cout<<"minval = "<<minval<<" expected dist = "<<diff[0][j]+dist[wordList[j]]<<endl;
-    //     minval = min(minval, diff[0][j]+dist[wordList[j]]);
-    //     dist[wordList[0]] = minval;
-    //     cout<<"updated min val = "<<minval<<endl<<endl;
-    // }
-    // for(int j=0;j<wordList.size();j++) {
-    //     cout<<"comparing with "<<wordList[j]<<endl;
-    //     cout<<"minval = "<<minval<<" expected dist = "<<diff[0][j]+dist[wordList[j]]<<endl;
-    //     minval = min(minval, diff[0][j]+dist[wordList[j]]);
-    //     dist[wordList[0]] = minval;
-    //     cout<<"updated min val = "<<minval<<endl<<endl;
-    // }
-    // cout<<"final distance = "<<dist[wordList[0]]<<endl;

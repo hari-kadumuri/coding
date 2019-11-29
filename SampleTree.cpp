@@ -1,0 +1,18 @@
+Node* root = new Node;
+root->data = 10;
+root->left = new Node;
+root->right = new Node;
+root->left->data = 20;
+root->right->data = 30;
+cout<<"hello2"<<endl;
+root->left->left = new Node;
+root->left->right = new Node;
+root->right->left = NULL;
+root->right->right = NULL;
+cout<<"hello2"<<endl;
+root->left->left->data = 40;
+root->left->right->data = 60;
+root->left->left->left = NULL;
+root->left->left->right = NULL;
+root->left->right->left = NULL;
+root->left->right->right = NULL;
