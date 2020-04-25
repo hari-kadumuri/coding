@@ -85,11 +85,11 @@ int findPos(char input[], char c, int n) {
 }
 
 // uitility function that generates words with input characters and checks if they exist in the dictionary
-void printPossibilities(char input[], int n, vector<pair<char, int>>& conditions) {
+void printPossibilities(char input[], int n, int size, vector<pair<char, int>>& conditions) {
 	vector<string> allwords;
 	// yet to be done
 	string buf;
-	for(int i=0;i<n;i++)
+	for(int i=0;i<size;i++)
 		buf.push_back('-');
 	bool visited[n] = {false};
 	for(int i=0, j=0;i<n && conditions.size()>0;i++) {
@@ -128,6 +128,9 @@ int main(int argc, char const *argv[])
 		cout<<"enter characters:\n";
 		for(int i=0;i<n;i++)
 			cin>>input[i];
+		int size;
+		cout<<"enter size of the word needs to be generated: ";
+		cin>>size;
 		vector<pair<char, int>> conditions;
 		cout<<"enter conditions (character followed by position counting from 1, enter - to run possibilities)"<<endl;
 		while(1) {
@@ -139,7 +142,7 @@ int main(int argc, char const *argv[])
 			cin>>pos;
 			conditions.push_back(make_pair(c, pos));
 		}
-		printPossibilities(input, n, conditions);
+		printPossibilities(input, n, size, conditions);
 	}
 	cout<<"\ndeleting dictionary..."<<endl;
 	deleteTrie(root);
