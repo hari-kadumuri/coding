@@ -128,21 +128,24 @@ int main(int argc, char const *argv[])
 		cout<<"enter characters:\n";
 		for(int i=0;i<n;i++)
 			cin>>input[i];
-		int size;
-		cout<<"enter size of the word needs to be generated: ";
-		cin>>size;
-		vector<pair<char, int>> conditions;
-		cout<<"enter conditions (character followed by position counting from 1, enter - to run possibilities)"<<endl;
 		while(1) {
-			char c;
-			int pos;
-			cin>>c;
-			if(c=='-')
-				break;
-			cin>>pos;
-			conditions.push_back(make_pair(c, pos));
+			int size;
+			cout<<"enter size of the word needs to be generated (enter non-positive to abort): ";
+			cin>>size;
+			if(size<=0) break;
+			vector<pair<char, int>> conditions;
+			cout<<"enter conditions (character followed by position counting from 1, enter - to run possibilities)"<<endl;
+			while(1) {
+				char c;
+				int pos;
+				cin>>c;
+				if(c=='-')
+					break;
+				cin>>pos;
+				conditions.push_back(make_pair(c, pos));
+			}
+			printPossibilities(input, n, size, conditions);
 		}
-		printPossibilities(input, n, size, conditions);
 	}
 	cout<<"\ndeleting dictionary..."<<endl;
 	deleteTrie(root);
