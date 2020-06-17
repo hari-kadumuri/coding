@@ -40,9 +40,9 @@ int main(int argc, char const *argv[])
 	string filename = "in.csv";
 	vector<int> arr = parseFile(filename);
 	int limit = 30;
-	for(auto x: arr)
-		cout<<x<<" ";
-	cout<<endl;
+	// for(auto x: arr)
+	// 	cout<<x<<" ";
+	// cout<<endl;
 	cout<<getPeriod(arr, min(limit, (int)arr.size()))<<endl;
 	return 0;
 }
